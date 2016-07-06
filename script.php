@@ -10,7 +10,7 @@ $json = json_decode ($wf->request (TRANS_QUERY_URL));
 foreach ($json->trans_result as $translation):
 $result['src'] = $translation->src;
 $result['dst'] = $translation->dst;
-$wf->result(1, 'https://diegozeng.github.io', $result['dst'], $query, 'icon.png', 'yes');
+$wf->result(1, 'http://fanyi.baidu.com/translate#auto/zh/$query', $result['dst'], $query, 'icon.png', 'yes');
 endforeach;
 
 echo $wf->toxml ();
